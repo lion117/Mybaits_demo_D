@@ -1,0 +1,44 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	
+	<!--配置链接的URL-->
+	<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/test_db
+		</property>
+		<!--
+		   配置链接驱动
+		-->
+		<property name="hibernate.connection.driver.class">
+			com.mysql.jdbc.Driver
+		</property>
+		<!--
+		编码方式
+		-->
+		<property name="connection.useUnicode">true</property>
+		<property name="connection.characterEncoding">UTF-8</property>
+		<!--
+		数据库用户名和密码
+		-->
+		<property name="hibernate.connection.username">admin</property>
+		<property name="hibernate.connection.password">admin</property>
+		<!--
+		hiberate解析方言，不同数据库会不一样，我们这里用MySql的
+		-->
+		<property name="hibernay.dialect">
+			org.hibernate.dialect.MySQLDialect.class
+		</property>
+		<!--
+		在控制台中显示sql语句，这个是用于调试用的，项目上线一定不要加这个哦
+		-->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!--
+		引入Emp员工这个实体类的配置文件
+		-->
+		<mapping resource="entity/Emp.hbm.xml"></mapping>
+	</session-factory>
+</hibernate-configuration>

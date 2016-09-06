@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="entity.Emp" table="t_emp">
+		<id name="id" column="id">
+			<!--数据库的主键生成策略  native配置为使用数据库自带的生成策略-->
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="name" >
+		</property>
+		<property name="salary" column="salary">
+		</property>
+		<property name="age" column="age">
+		</property>
+	</class>
+</hibernate-mapping>

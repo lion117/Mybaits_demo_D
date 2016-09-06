@@ -16,15 +16,15 @@ import java.io.Reader;
 public class Main {
 
     public static void main(String[] args) {
-        String resource = "mybatis.xml";
+        String resource = "mybatis-config.xml";
 
-        File i_file = new File(resource);
-        if (!i_file.exists()){
-            System.out.println("file is not exist");
-            return;
-        }else {
-            System.out.println("find files ");
-        }
+//        File i_file = new File(resources);
+//        if (!i_file.exists()){
+//            System.out.println("file is not exist");
+//            return;
+//        }else {
+//            System.out.println("find files ");
+//        }
 
 
         SqlSession sqlSession = null;
